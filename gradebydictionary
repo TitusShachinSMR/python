@@ -1,0 +1,11 @@
+a={'titus':91,'shachin':90,'rex':99}
+b={}
+j=0
+b=a.copy()
+for i in a:
+ if(a[i]>=91):
+   b[i]='A+'
+ if(a[i]<=90 and a[i]>=81):
+   b[i]='A'
+print(b)
+    
