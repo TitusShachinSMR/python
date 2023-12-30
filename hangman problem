@@ -1,0 +1,53 @@
+import random
+
+list=["quartz","mystic","blitz","twelve","jigsaw","glimpse","hydrant","frolic","plunge","vortex"]
+win=["Your prediction is spot on","Your guess is incredibly accurate","Your estimation is right on the money","You've accurately predicted it"]
+lose=["Your guess is incorrect",
+"That's not the right answer",
+"Sorry, but your guess is wrong",
+"Unfortunately, that's a mistaken guess",
+"Regrettably, your guess is inaccurate",
+"Incorrect, please try again", 
+"Not quite, your guess is off",
+"Wrong choice on the guess",
+"Afraid that's not the correct guess",
+"No, your guess is not right"]
+print(""" 
+         guess the letters of word
+         you have six life
+         if you guess wrong letter 
+         you lose one life 
+         
+         best of luck\n""")
+l=0
+y= random.choice(list)
+b=[]
+for _i in range(1,len(y)+1):
+ b.append('-')
+print("word you need to find is as follow\n ")     
+print(b)
+print("\n")
+while l!=6:
+  c=input("guess and enter the letter: \n")
+  if(c in y):
+      print(random.choice(win))
+      print("\n")
+      z= y.index(c)
+      b[z]=c
+  else:
+      l=l+1
+      print(f"""
+      {random.choice(lose)},
+      still {6-l}lives left\n""")
+  if(not('-'in b)):
+    print(f"word is {y}\n")
+    print("\n you won!\n")
+    print("the end")
+    break
+  print(b)
+  print("\n")
+if(l==6):
+  print("\nyou lost buddy, better luck next time")
+  print("END GAME")
+   
+      
