@@ -1,0 +1,26 @@
+a= "yes"
+b=input("enter the word")
+d=list(b)
+e=[]
+for i in range(0,len(d)):
+  e.append(ord(d[i]))
+  
+while(a=="yes"):
+  
+  c=input("enter inc or dec")
+  f=input("buy how much digit")
+  if(c=="inc"):
+    for i in range(0,len(e)):
+      e[i]=e[i]+int(f)
+  else:
+    for i in  range(0,len(e)):
+       e[i]=e[i]-int(f)
+      
+  t=''
+  for i in e:
+    
+    t=t+chr(i)
+  print(f"the encrypted word is {t}")
+  a=input("next you want to encrypt other word type yes, or else no") 
+  b= input("enter the word")
+print("thankyou")
