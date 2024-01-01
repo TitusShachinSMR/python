@@ -1,0 +1,14 @@
+def fun(*t):
+  sum=0
+  for i in t:
+      sum=sum+i
+  return sum
+x=input("enter the number")
+y=x.split(' ')
+z=['']*len(y)
+print(z)
+t=0
+for i in y:
+  z[t] =int(i)
+  t=t+1
+print(fun(tuple(z)))
