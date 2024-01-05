@@ -1,0 +1,25 @@
+a=input("enter the hexadecimal number")
+b=list(a)
+print(b)
+for i in range(len(b)):
+  if b[i]=='A':
+   b[i]=10
+  elif b[i]=='B':
+   b[i]=11
+  elif b[i]=='C':
+   b[i]=12
+  elif b[i]=='D':
+   b[i]=13
+  elif b[i]=='E':
+   b[i]=14
+  elif b[i]=='F':
+   b[i]=15
+  else:
+   b[i]=int(b[i])
+print(b)
+t=0
+sum=0
+for i in range(len(b)-1,-1,-1):
+  sum=sum+b[i]*(16**t)
+  t=t+1
+print(sum)
