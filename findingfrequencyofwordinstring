@@ -11,3 +11,12 @@ for i in c:
         l=l+1
     
 print(f"frequency of word:{l}")
+"""
+a=input("enter the string ")
+c=a.strip()
+c=c.replace(',',' ')
+c=c.replace('.',' ' )
+c=c.split(' ')
+b=input("enter the word frequency to find")
+l=c.count(b.strip())
+print(f"frequency of word:{l}")"""
